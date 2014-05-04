@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+<html>
+{% block title %}
+  {% for sp in range(20) %}
+       &nbsp
+  {% endfor %}
+  Classifier
+{% endblock %}
+{% block body %}
+  <h2>{{ self.title() }}</h2>
+  <div id = 'summary1'>
+  {% for message in messages %}
+           <p>
+           {{ message[0] }} : {{ message[1] }}
+           </p>
+  {% endfor %}
+  </div> 
+{% endblock %}
+</html>

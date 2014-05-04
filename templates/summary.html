@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+<html>
+{% block title %}
+  {% for sp in range(20) %}
+       &nbsp
+  {% endfor %}
+  Summarizer
+{% endblock %}
+{% block body %}
+  <h2>{{ self.title() }}</h2>
+  <div id = 'summary1'>
+  {% for message in messages %}
+           <h3>
+           {{ message[0] }}
+           </h3>
+           <p>
+           {{ message[1] }}
+           </p>
+  {% endfor %}
+  </div> 
+{% endblock %}
+</html>

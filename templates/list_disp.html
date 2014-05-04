@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type = "text/javascript">
+window.onload = function list_disp()
+{
+ var list_files = new Array();
+ //list_files = [{{ ' '.join(list_f) }}];
+ list_files = {{ list_f|safe }};
+ var e = document.getElementById("listtags");
+ //e.innerHTML = list_files;
+ var combo = document.getElementById("combo2");
+
+    //list_files = JSON.parse("["+list_files+"]");
+    for(var i = 0; i < list_files.length;i++)
+    {
+      var option = document.createElement("option");
+      option.value = list_files[i].substring(0,list_files[i].length - 4);
+      option.text = list_files[i].substring(0,list_files[i].length - 4);
+      //alert(list_files[i]);
+      combo.add(option,null);
+     }
+    e.appendChild(combo);
+    
+}
+ function textSelect(obj)  
+        {           
+            var input = document.getElementById('value_tweet');
+            input.value = obj.value;
+        }
+</script>
+</head>
+<body>
+<div id = "listtags">
+  <form method="post" action="{{ url_for('visualise') }}">
+  <select name="combo2" id="combo2" onchange =  "textSelect(this)">
+  <OPTION value="Borini">Borini</OPTION>
+  </select>
+   <br>
+  <input name = "value_tweet" id = "value_tweet" placeholder = "Selected Value Updated here">
+ <br>
+  <input type = "submit">
+  </form>
+</div>
+</body>
+</html>

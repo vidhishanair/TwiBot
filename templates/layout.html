@@ -1,0 +1,26 @@
+<!doctype html>
+<title>{% block title %}Welcome{% endblock %} | TwiBot</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>TwiBot</h1>
+  <div class=navigation>
+    <a href="{{ url_for('summary') }}">Summary</a> |
+    <a href="{{ url_for('classification') }}">Classification</a> |
+    <a href="{{ url_for('map') }}">Map</a>
+  </div>
+  {% with flashes = get_flashed_messages() %}
+    {% if flashes %}
+      <ul class=flashes>
+      {% for message in flashes %}
+        <li>{{ message }}
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <div class=body>
+  {% block body %}{% endblock %}
+  </div>
+  <div class=footer>
+    TwiBot&mdash; A Twitter analyser
+  </div>
+</div>
