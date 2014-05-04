@@ -3,9 +3,6 @@ TwiBot
 
 A twitter analyser - summaries, classification and location mapping.
 
-
-<<<<<<< HEAD
-=======
 Description
 ===========
 
@@ -18,4 +15,4 @@ How to Run
 
 Since the application runs on flask. Run the python file analyse.py and point browser to localhost:5000 to see results.
 Note: The application has many path dependencies at many places. Work is underway to automate this.
->>>>>>> e370cc058b32c1205f6a85c85cdd91c3053121bb
+
