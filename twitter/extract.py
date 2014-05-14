@@ -2,10 +2,10 @@ import json
 import twitter
 #t = twitter.Twitter(domain='api.twitter.com', api_version='1.1')
 #print json.dumps(t.trends(), indent=1)
-CONSUMER_KEY = '21mUAnTZjIWrgzhT4V6XA'
-CONSUMER_SECRET ='WFPi3goF6nITcqQkKJMFP3EumucRBG5agFESW5v2qw'
-OAUTH_TOKEN = '957806420-perDXIS8BHoHz2RVNFfTAB5iUNzu4R93QiekCO2G'
-OAUTH_TOKEN_SECRET = 'pSQ9kwR9xhW4aGcl5x0IptIzqHQrcOWIOfGbeDC8fuE'
+CONSUMER_KEY = 'consumer key'
+CONSUMER_SECRET ='consumer secret'
+OAUTH_TOKEN = 'oauth token'
+OAUTH_TOKEN_SECRET = 'oauth token secret'
 count=1400
 
 auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,
