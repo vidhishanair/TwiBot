@@ -16,3 +16,8 @@ How to Run
 Since the application runs on flask. Run the python file analyse.py and point browser to localhost:5000 to see results.
 Note: The application has many path dependencies at many places. Work is underway to automate this.
 
+Dependencies
+==========
+1. Flask
+2. NLTK with Tokenizer module
+3. Scikit 
